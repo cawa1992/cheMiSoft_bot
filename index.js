@@ -16,26 +16,26 @@ bot.start((ctx) => { // Бот стартует
  * 
  * Действие бота при нажатии на кпопку
  * Задание для Саши
- * 1. Переписать текст сообщения
- * 2. Переписать нименование кнопки
+ * 1. Переписать текст сообщения-сделал
+ * 2. Переписать нименование кнопки - сделал
  */
 bot.action('lang_ru', (ctx) => {
-    ctx.reply('Из списка выберите необходимую толщину основного металла', Markup.inlineKeyboard([
-        [Markup.button.callback('Выберать толщину', 'show_thikness')]
+    ctx.reply('выберите толщину металла', Markup.inlineKeyboard([
+        [Markup.button.callback('Выбрать толщину', 'show_thikness')]
     ]))
 })
 
 /**
  * Подготовить English version
  * Задание для Саши
- * 1. Переписать текст сообщения
- * 2. Переписать нименование кнопки
+ * 1. Переписать текст сообщения - сделал
+ * 2. Переписать нименование кнопки - сделал
  */
 
 bot.action('lang_en', (ctx) => {
     ctx.reply("You've been selected English ")
 })
-
+bot.action('lang_en'?(ctx) => {ctx.reply("select metal thickness",Markup.inlineKeyboard([Markup.button.callback('Select thickness','show_thikness')]))})
 /**
  * 
  * Смапить данные и сделать поиск по толщине
